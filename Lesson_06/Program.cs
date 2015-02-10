@@ -13,6 +13,7 @@ namespace Lesson_06
             Class1 myClass = new Class1("Hello");
 
             myClass.IntegerNumber = 10;
+            myClass.DoubleNumber = 50.0;
             //myClass.StringVariable = "Hi";
 
 

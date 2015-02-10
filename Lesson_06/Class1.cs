@@ -10,9 +10,9 @@ namespace Lesson_06
     {
         //PRIVATE INSTANCE VARIABLES ++++++++++++++++++++++++++++++++++++++++++
         //just hold the data
-        private int integerNumber;
-        private string stringVariable;
-        private double doubleNumber = 50.0d;
+        private int _integerNumber;
+        private string _stringVariable;
+        private double _doubleNumber = 0.0d;
 
         //PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++
         //access to the data
@@ -20,12 +20,12 @@ namespace Lesson_06
         {
             get 
             {
-                return this.integerNumber; //RETURNS VALUE OF INSTANCE
+                return this._integerNumber; //RETURNS VALUE OF INSTANCE
             }
             set 
             {
                 Console.WriteLine("");
-                this.integerNumber = value * 2; //SET OUR INTANCE VARIABLE
+                this._integerNumber = value * 2; //SET OUR INTANCE VARIABLE
             }
         }
 
@@ -33,15 +33,26 @@ namespace Lesson_06
         {
             get 
             {
-                return this.stringVariable; //READ ONLY PROPERTY
+                return this._stringVariable; //READ ONLY PROPERTY
             }
         }
 
-        public double DoubleNumber{ get; set; }
+        public double DoubleNumber
+        {
+            get 
+            {
+                return this._doubleNumber;
+            }
+            set 
+            {
+                this._doubleNumber = value;
+            }
+
+        }
 
         public Class1(string theString)
         {
-            this.stringVariable = theString;
+            this._stringVariable = theString;
         }
 
         public void show()
@@ -49,10 +60,11 @@ namespace Lesson_06
             
             Console.Write("++++++++++++++++++++++");
             Console.Write("\n");
-            Console.WriteLine("IntegerNumber: {0}", this.integerNumber);
-            Console.WriteLine("stringVariable: {0}", this.stringVariable);
-            Console.WriteLine("DoubleNumber: {0}", this.doubleNumber);
+            Console.WriteLine("IntegerNumber: {0}", this._integerNumber);
+            Console.WriteLine("StringVariable: {0}", this._stringVariable);
+            Console.WriteLine("DoubleNumber: {0}", this._doubleNumber);
             Console.Write("++++++++++++++++++++++");
+            Console.Write("\n");
 
         }
     }
